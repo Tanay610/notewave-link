@@ -243,10 +243,11 @@
       // Try opening the app
       window.location.href = deepLink;
 
-      // If still here after 1.5s, app isn't installed
+      // If still here after 1.5s, app isn't installed — redirect to store
       setTimeout(function() {
         document.getElementById('loading').classList.add('hidden');
         document.getElementById('fallback').classList.remove('hidden');
+        window.location.href = storeUrl;
       }, 1500);
     })();
   </script>
